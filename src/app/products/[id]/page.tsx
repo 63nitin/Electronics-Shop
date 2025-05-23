@@ -35,7 +35,7 @@ export async function generateMetadata(
       title: product.name,
       description: product.description,
       images: [product.images[0], ...previousImages],
-      type: 'product',
+      type: 'article', // Changed from 'product' to 'article'
       siteName: 'Electron Hub',
     },
     // Example for JSON-LD structured data (important for SEO)
