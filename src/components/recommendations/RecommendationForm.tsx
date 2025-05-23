@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from 'react';
@@ -10,8 +11,9 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { useToast } from '@/hooks/use-toast';
-import { Loader2, Sparkles } from 'lucide-react';
+import { Loader2, Sparkles, ListChecks } from 'lucide-react';
 
 const formSchema = z.object({
   browsingHistory: z.string().min(10, "Please provide some browsing history (e.g., product names or IDs you've looked at).").max(500),
@@ -21,7 +23,7 @@ const formSchema = z.object({
 type RecommendationFormValues = z.infer<typeof formSchema>;
 
 export function RecommendationForm() {
-  const [recommendations, setRecommendations] = useState<PersonalizedProductRecommendationsOutput | null>(null);
+  const [recommendationsOutput, setRecommendationsOutput] = useState<PersonalizedProductRecommendationsOutput | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
@@ -35,10 +37,10 @@ export function RecommendationForm() {
 
   async function onSubmit(values: RecommendationFormValues) {
     setIsLoading(true);
-    setRecommendations(null);
+    setRecommendationsOutput(null);
     try {
       const result = await getPersonalizedProductRecommendations(values);
-      setRecommendations(result);
+      setRecommendationsOutput(result);
       toast({
         title: "Recommendations Ready!",
         description: "We've found some products you might like.",
@@ -124,15 +126,32 @@ export function RecommendationForm() {
         </div>
       )}
 
-      {recommendations && (
+      {recommendationsOutput && recommendationsOutput.recommendations && recommendationsOutput.recommendations.length > 0 && (
         <Card className="shadow-lg">
           <CardHeader>
-            <CardTitle>Your Personalized Recommendations</CardTitle>
+            <CardTitle className="flex items-center gap-2">
+              <ListChecks className="h-6 w-6 text-primary" />
+              Your Personalized Recommendations
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            {recommendationsOutput.recommendations.map((rec, index) => (
+              <Alert key={index} className="shadow-sm">
+                <AlertTitle className="font-semibold text-primary">{rec.name}</AlertTitle>
+                <AlertDescription className="text-foreground/80">{rec.reason}</AlertDescription>
+              </Alert>
+            ))}
+          </CardContent>
+        </Card>
+      )}
+
+      {recommendationsOutput && (!recommendationsOutput.recommendations || recommendationsOutput.recommendations.length === 0) && !isLoading && (
+        <Card className="shadow-lg">
+          <CardHeader>
+            <CardTitle>No Specific Recommendations Found</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="prose prose-sm max-w-none dark:prose-invert text-foreground">
-              <p>{recommendations.productRecommendations}</p>
-            </div>
+            <p className="text-muted-foreground">We couldn't find specific product recommendations based on your input. Try adjusting your browsing history or preferences.</p>
           </CardContent>
         </Card>
       )}
