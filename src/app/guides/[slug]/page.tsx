@@ -8,6 +8,7 @@ import type { Metadata, ResolvingMetadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 interface GuidePageProps {
   params: { slug: string };
@@ -96,10 +97,16 @@ export default function GuidePage({ params }: GuidePageProps) {
         <>
           <Separator className="my-12" />
           <section className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-10 text-foreground">Related Products</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {relatedProducts.map(product => product && <ProductCard key={product.id} product={product} />)}
-            </div>
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-2xl md:text-3xl">Related Products</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  {relatedProducts.map(product => product && <ProductCard key={product.id} product={product} />)}
+                </div>
+              </CardContent>
+            </Card>
           </section>
         </>
       )}
