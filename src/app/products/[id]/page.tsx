@@ -35,7 +35,7 @@ export async function generateMetadata(
       title: product.name,
       description: product.description,
       images: [product.images[0], ...previousImages],
-      type: 'article', // Changed from 'product' to 'article'
+      type: 'article',
       siteName: 'Electron Hub',
     },
     // Example for JSON-LD structured data (important for SEO)
@@ -99,10 +99,6 @@ export default function ProductPage({ params }: ProductPageProps) {
           <p className="text-lg text-muted-foreground mb-4">{product.description}</p>
           
           <p className="text-3xl font-semibold text-primary my-4">${product.price.toFixed(2)}</p>
-          
-          <Button size="lg" className="w-full md:w-auto bg-accent hover:bg-accent/90 text-accent-foreground mb-4 shadow-md">
-            <ShoppingCart className="mr-2 h-5 w-5" /> Add to Cart
-          </Button>
           
           {product.stock > 0 ? (
             <p className="text-sm text-green-600">In Stock ({product.stock} available)</p>
