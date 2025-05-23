@@ -1,11 +1,10 @@
 import { getProductById, sampleProducts } from '@/lib/data';
 import { Container } from '@/components/layout/Container';
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Star, ShoppingCart, MessageSquare } from 'lucide-react';
+import { Star, MessageSquare } from 'lucide-react';
 import type { Metadata, ResolvingMetadata } from 'next';
 import { ProductImageGallery } from '@/components/products/ProductImageGallery';
 import { notFound } from 'next/navigation';
@@ -35,31 +34,9 @@ export async function generateMetadata(
       title: product.name,
       description: product.description,
       images: [product.images[0], ...previousImages],
-      type: 'article',
+      type: 'article', // Changed from 'product'
       siteName: 'Electron Hub',
     },
-    // Example for JSON-LD structured data (important for SEO)
-    // This would typically be generated dynamically
-    // For now, this is a basic structure.
-    /*
-    other: {
-      '@context': 'https://schema.org/',
-      '@type': 'Product',
-      name: product.name,
-      image: product.images,
-      description: product.description,
-      sku: product.sku,
-      offers: {
-        '@type': 'Offer',
-        url: `https://www.electronhub.com/products/${product.id}`, // Replace with actual domain
-        priceCurrency: 'USD',
-        price: product.price.toString(),
-        availability: product.stock > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
-        itemCondition: 'https://schema.org/NewCondition',
-      },
-      // brand, review, aggregateRating would go here if available
-    },
-    */
   };
 }
 
@@ -121,7 +98,7 @@ export default function ProductPage({ params }: ProductPageProps) {
       <Separator className="my-8 md:my-12" />
 
       <div className="grid md:grid-cols-3 gap-8">
-        <div className="md:col-span-2">
+        <div className="md:col-span-3"> {/* Changed col-span to 3 to take full width */}
           <Card className="shadow-sm">
             <CardHeader>
               <CardTitle>Product Details</CardTitle>
@@ -145,34 +122,6 @@ export default function ProductPage({ params }: ProductPageProps) {
                     ))}
                   </ul>
                 </>
-              )}
-            </CardContent>
-          </Card>
-        </div>
-
-        <div className="md:col-span-1">
-          <Card className="shadow-sm">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2"><MessageSquare className="h-5 w-5 text-primary" /> Customer Reviews</CardTitle>
-            </CardHeader>
-            <CardContent>
-              {product.reviews && product.reviews.length > 0 ? (
-                <ul className="space-y-4">
-                  {product.reviews.map(review => (
-                    <li key={review.id} className="border-b pb-3 last:border-b-0">
-                      <div className="flex items-center mb-1">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className={`h-4 w-4 ${i < review.rating ? 'text-yellow-400 fill-yellow-400' : 'text-muted-foreground'}`} />
-                        ))}
-                        <span className="ml-2 text-sm font-semibold text-foreground">{review.author}</span>
-                      </div>
-                      <p className="text-xs text-muted-foreground mb-1">{new Date(review.date).toLocaleDateString()}</p>
-                      <p className="text-sm text-foreground/90">{review.comment}</p>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="text-sm text-muted-foreground">No reviews yet for this product.</p>
               )}
             </CardContent>
           </Card>
