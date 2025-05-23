@@ -1,3 +1,4 @@
+
 import type { Product, Guide, ProductCategory } from '@/types/domain';
 import { Zap, Wind, Cable, CircuitBoard } from 'lucide-react';
 
@@ -93,33 +94,38 @@ export const sampleGuides: Guide[] = [
     slug: 'how-to-safely-install-a-ceiling-fan',
     excerpt: 'A step-by-step guide to installing your new ceiling fan safely and efficiently.',
     content: `
-## Introduction
-Installing a ceiling fan can improve air circulation and add style to your room. This guide will walk you through the process. Safety first! Always turn off the power at the circuit breaker before working on electrical wiring.
+<h2>Introduction</h2>
+<p>Installing a ceiling fan can improve air circulation and add style to your room. This guide will walk you through the process. Safety first! Always turn off the power at the circuit breaker before working on electrical wiring.</p>
 
-## Tools Needed
-- Screwdriver set
-- Wire strippers
-- Pliers
-- Ladder
-- Voltage tester
-- Ceiling fan mounting kit (usually included with fan)
+<h2>Tools Needed</h2>
+<ul>
+  <li>Screwdriver set</li>
+  <li>Wire strippers</li>
+  <li>Pliers</li>
+  <li>Ladder</li>
+  <li>Voltage tester</li>
+  <li>Ceiling fan mounting kit (usually included with fan)</li>
+</ul>
 
-## Steps
-1.  **Turn Off Power:** Locate the circuit breaker controlling the room's power and switch it off. Use a voltage tester to confirm there's no power to the existing fixture or wiring.
-2.  **Remove Old Fixture:** If replacing an old fan or light, carefully remove it. Disconnect the wires.
-3.  **Install Mounting Bracket:** Secure the fan's mounting bracket to the electrical box in the ceiling. Ensure the box is rated to support the weight of a ceiling fan.
-4.  **Assemble Fan:** Follow the manufacturer's instructions to assemble the fan motor, blades, and light kit (if applicable).
-5.  **Wire the Fan:** Connect the fan's wires to the house wiring according to the color codes (usually black to black, white to white, green/bare copper to green/bare copper). Use wire nuts to secure connections.
-6.  **Attach Fan to Bracket:** Lift the fan assembly and attach it to the mounting bracket.
-7.  **Install Canopy:** Slide the canopy up to cover the wiring and bracket, then secure it.
-8.  **Install Blades and Lights:** Attach the fan blades and any light fixtures.
-9.  **Test:** Turn the power back on at the circuit breaker. Test the fan and light operations using the pull chains, remote, or wall switch.
+<h2>Steps</h2>
+<ol>
+  <li><strong>Turn Off Power:</strong> Locate the circuit breaker controlling the room's power and switch it off. Use a voltage tester to confirm there's no power to the existing fixture or wiring.</li>
+  <li><strong>Remove Old Fixture:</strong> If replacing an old fan or light, carefully remove it. Disconnect the wires.</li>
+  <li><strong>Install Mounting Bracket:</strong> Secure the fan's mounting bracket to the electrical box in the ceiling. Ensure the box is rated to support the weight of a ceiling fan.</li>
+  <li><strong>Assemble Fan:</strong> Follow the manufacturer's instructions to assemble the fan motor, blades, and light kit (if applicable).</li>
+  <li><strong>Wire the Fan:</strong> Connect the fan's wires to the house wiring according to the color codes (usually black to black, white to white, green/bare copper to green/bare copper). Use wire nuts to secure connections.</li>
+  <li><strong>Attach Fan to Bracket:</strong> Lift the fan assembly and attach it to the mounting bracket.</li>
+  <li><strong>Install Canopy:</strong> Slide the canopy up to cover the wiring and bracket, then secure it.</li>
+  <li><strong>Install Blades and Lights:</strong> Attach the fan blades and any light fixtures.</li>
+  <li><strong>Test:</strong> Turn the power back on at the circuit breaker. Test the fan and light operations using the pull chains, remote, or wall switch.</li>
+</ol>
 
-## Troubleshooting
-- **Fan wobbles:** Ensure blades are balanced and screws are tight.
-- **Fan doesn't work:** Double-check wiring connections and ensure power is on.
-
-*Disclaimer: This is a general guide. Always refer to your fan manufacturer's specific instructions and local electrical codes. If unsure, consult a qualified electrician.*
+<h2>Troubleshooting</h2>
+<ul>
+  <li><strong>Fan wobbles:</strong> Ensure blades are balanced and screws are tight.</li>
+  <li><strong>Fan doesn't work:</strong> Double-check wiring connections and ensure power is on.</li>
+</ul>
+<p><em>Disclaimer: This is a general guide. Always refer to your fan manufacturer's specific instructions and local electrical codes. If unsure, consult a qualified electrician.</em></p>
     `,
     imageUrl: 'https://placehold.co/800x450.png?text=Ceiling+Fan+Installation',
     relatedProductIds: ['smart-ceiling-fan-x100'],
@@ -133,27 +139,32 @@ Installing a ceiling fan can improve air circulation and add style to your room.
     slug: 'choosing-the-right-wires-for-your-home-projects',
     excerpt: 'Understand wire gauges, types, and color codes for safe electrical work.',
     content: `
-## Introduction
-Selecting the correct wire is crucial for safety and performance in any electrical project. This guide covers the basics of wire types, gauges, and color coding.
+<h2>Introduction</h2>
+<p>Selecting the correct wire is crucial for safety and performance in any electrical project. This guide covers the basics of wire types, gauges, and color coding.</p>
 
-## Wire Gauge (AWG)
-American Wire Gauge (AWG) indicates the wire's diameter. Lower AWG numbers mean thicker wires, which can carry more current.
-- **14-gauge:** Common for lighting circuits, outlets (15-amp circuits).
-- **12-gauge:** Used for kitchen, bathroom, and outdoor receptacles (20-amp circuits).
-- **10-gauge:** For larger appliances like dryers, A/C units (30-amp circuits).
+<h2>Wire Gauge (AWG)</h2>
+<p>American Wire Gauge (AWG) indicates the wire's diameter. Lower AWG numbers mean thicker wires, which can carry more current.</p>
+<ul>
+  <li><strong>14-gauge:</strong> Common for lighting circuits, outlets (15-amp circuits).</li>
+  <li><strong>12-gauge:</strong> Used for kitchen, bathroom, and outdoor receptacles (20-amp circuits).</li>
+  <li><strong>10-gauge:</strong> For larger appliances like dryers, A/C units (30-amp circuits).</li>
+</ul>
 
-## Wire Types
-- **NM-B (Non-Metallic):** Most common for interior residential wiring. Sheathed cable containing multiple conductors.
-- **UF-B (Underground Feeder):** Suitable for direct burial underground, often used for outdoor lighting or detached garages.
-- **THHN/THWN:** Individual insulated conductors, often used inside conduit.
+<h2>Wire Types</h2>
+<ul>
+  <li><strong>NM-B (Non-Metallic):</strong> Most common for interior residential wiring. Sheathed cable containing multiple conductors.</li>
+  <li><strong>UF-B (Underground Feeder):</strong> Suitable for direct burial underground, often used for outdoor lighting or detached garages.</li>
+  <li><strong>THHN/THWN:</strong> Individual insulated conductors, often used inside conduit.</li>
+</ul>
 
-## Color Coding
-Standard color codes for wires in the US:
-- **Black/Red:** Hot (carries current from the source)
-- **White:** Neutral (returns current to the source)
-- **Green/Bare Copper:** Ground (safety path for fault current)
-
-*Always consult local electrical codes and a professional electrician if you are unsure about any aspect of your wiring project.*
+<h2>Color Coding</h2>
+<p>Standard color codes for wires in the US:</p>
+<ul>
+  <li><strong>Black/Red:</strong> Hot (carries current from the source)</li>
+  <li><strong>White:</strong> Neutral (returns current to the source)</li>
+  <li><strong>Green/Bare Copper:</strong> Ground (safety path for fault current)</li>
+</ul>
+<p><em>Always consult local electrical codes and a professional electrician if you are unsure about any aspect of your wiring project.</em></p>
     `,
     imageUrl: 'https://placehold.co/800x450.png?text=Wiring+Types',
     relatedProductIds: ['premium-copper-wire-10m'],
@@ -169,3 +180,6 @@ export const getAllProducts = (): Product[] => sampleProducts;
 
 export const getGuideBySlug = (slug: string): Guide | undefined => sampleGuides.find(g => g.slug === slug);
 export const getAllGuides = (): Guide[] => sampleGuides;
+
+
+    
