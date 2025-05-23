@@ -21,7 +21,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <Container className="flex h-16 items-center justify-between">
         <Logo />
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+        <nav className="hidden md:flex items-center space-x-4 text-sm font-medium">
           {navItems.map((item) => (
             <Link
               key={item.label}
@@ -32,7 +32,7 @@ export function Header() {
             </Link>
           ))}
           <div className="relative">
-            <Input type="search" placeholder="Search products..." className="h-9 pr-8 w-48 lg:w-64" />
+            <Input type="search" placeholder="Search products..." className="h-9 pr-8 w-40 lg:w-56" />
             <Search className="absolute right-2 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           </div>
         </nav>
