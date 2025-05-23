@@ -65,28 +65,38 @@ export default function GuidePage({ params }: GuidePageProps) {
           Back to all guides
         </Link>
       </div>
-      <article className="prose prose-lg max-w-4xl mx-auto dark:prose-invert prose-headings:font-bold prose-headings:text-foreground prose-p:text-foreground/90 prose-a:text-primary prose-strong:text-foreground">
+
+      {/* Card-like container for the entire guide content */}
+      <div className="bg-card text-card-foreground rounded-xl shadow-xl overflow-hidden max-w-4xl mx-auto">
         {guide.imageUrl && (
-          <div className="aspect-video relative overflow-hidden rounded-lg mb-8 shadow-lg">
+          <div className="aspect-video relative w-full">
             <Image src={guide.imageUrl} alt={guide.title} layout="fill" objectFit="cover" data-ai-hint={`${guide.category} tutorial image`} />
           </div>
         )}
-        <div className="mb-4">
-          <Badge variant="outline">{guide.category}</Badge>
-          <span className="ml-2 text-sm text-muted-foreground">Last updated: {new Date(guide.lastUpdated).toLocaleDateString()}</span>
-          {guide.author && <span className="ml-2 text-sm text-muted-foreground">By: {guide.author}</span>}
+        
+        <div className="p-6 md:p-8"> {/* Padding for text content */}
+          <div className="mb-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+            <Badge variant="outline">{guide.category}</Badge>
+            <span className="text-muted-foreground">Last updated: {new Date(guide.lastUpdated).toLocaleDateString()}</span>
+            {guide.author && <span className="text-muted-foreground">By: {guide.author}</span>}
+          </div>
+          
+          {/* Apply prose to this inner article */}
+          <article className="prose prose-lg dark:prose-invert 
+                              prose-headings:font-bold prose-headings:text-foreground 
+                              prose-p:text-foreground/90 prose-a:text-primary prose-strong:text-foreground
+                              max-w-none"> {/* max-w-none to ensure prose takes full width of its container */}
+            <h1>{guide.title}</h1>
+            <div dangerouslySetInnerHTML={{ __html: guide.content }} />
+          </article>
         </div>
-        
-        <h1>{guide.title}</h1>
-        
-        <div dangerouslySetInnerHTML={{ __html: guide.content }} />
-      </article>
+      </div>
 
       {relatedProducts.length > 0 && (
         <>
           <Separator className="my-12" />
           <section className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-center mb-8 text-foreground">Related Products</h2>
+            <h2 className="text-3xl font-bold text-center mb-10 text-foreground">Related Products</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {relatedProducts.map(product => product && <ProductCard key={product.id} product={product} />)}
             </div>
