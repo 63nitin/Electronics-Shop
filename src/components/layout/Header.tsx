@@ -1,9 +1,10 @@
+
 import Link from 'next/link';
 import { Logo } from './Logo';
 import { Container } from './Container';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Home, Package, BookOpen, Sparkles, Search } from 'lucide-react';
+import { Menu, Home, Package, BookOpen, Sparkles, Search, MapPin, Mail } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 
 const navItems = [
@@ -11,6 +12,8 @@ const navItems = [
   { href: '/products', label: 'Products', icon: Package },
   { href: '/guides', label: 'Guides', icon: BookOpen },
   { href: '/recommendations', label: 'Finder', icon: Sparkles },
+  { href: '/location', label: 'Location', icon: MapPin },
+  { href: '/contact', label: 'Contact', icon: Mail },
 ];
 
 export function Header() {

@@ -1,3 +1,4 @@
+
 import { Container } from './Container';
 import { Logo } from './Logo';
 import Link from 'next/link';
@@ -20,6 +21,8 @@ export function Footer() {
             <li><Link href="/guides" className="text-muted-foreground hover:text-primary">Guides</Link></li>
             <li><Link href="/recommendations" className="text-muted-foreground hover:text-primary">Product Finder</Link></li>
             <li><Link href="/about" className="text-muted-foreground hover:text-primary">About Us</Link></li>
+            <li><Link href="/location" className="text-muted-foreground hover:text-primary">Location</Link></li>
+            <li><Link href="/contact" className="text-muted-foreground hover:text-primary">Contact Us</Link></li>
           </ul>
         </div>
         <div>
