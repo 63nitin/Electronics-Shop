@@ -18,10 +18,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Electron Hub - Your Source for Home Electronics',
-    template: '%s | Electron Hub',
+    default: 'Dikshant Electronics - Your Source for Home Electronics',
+    template: '%s | Dikshant Electronics',
   },
-  description: 'Electron Hub offers a wide range of electronic items like fans, wires for home wiring, and equipment to help with home electronics. Interactive, SEO-friendly, and user-focused.',
+  description: 'Dikshant Electronics offers a wide range of electronic items like fans, wires for home wiring, and equipment to help with home electronics. Interactive, SEO-friendly, and user-focused.',
   keywords: ['electronics, home wiring, fans, electronic equipment, online shop, electron hub'],
 };
 
@@ -32,6 +32,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+       <head>
+       
+        {/* Or use PNG/SVG: */}
+        <link rel="icon" type="image/svg" href="/icon.svg" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
         <ClientProviders>
           <Header />

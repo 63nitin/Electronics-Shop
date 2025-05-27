@@ -1,0 +1,20 @@
+<svg width="32" height="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    polygon {
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      /* Light theme primary color: hsl(208 25% 47%) -> #5A7B95 */
+      stroke: #5A7B95;
+      fill: #5A7B95;
+    }
+    @media (prefers-color-scheme: dark) {
+      polygon {
+        /* Dark theme primary color: hsl(208 25% 55%) -> #718DAA */
+        stroke: #718DAA;
+        fill: #718DAA;
+      }
+    }
+  </style>
+  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+</svg>
