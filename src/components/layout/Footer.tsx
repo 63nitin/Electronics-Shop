@@ -35,7 +35,7 @@ export function Footer() {
         </div>
       </Container>
       <Container className="mt-8 pt-8 border-t border-border/40 text-center text-sm text-muted-foreground">
-        &copy; {currentYear} Electron Hub. All rights reserved.
+        &copy; {currentYear} Zentrixa Web Solution. All rights reserved.
       </Container>
     </footer>
   );
