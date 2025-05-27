@@ -5,7 +5,7 @@ import { MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Our Location',
-  description: 'Find Electron Hub\'s physical store location and get directions.',
+  description: 'Find Dikshant Electronics\'s physical store location and get directions.',
 };
 
 export default function LocationPage() {

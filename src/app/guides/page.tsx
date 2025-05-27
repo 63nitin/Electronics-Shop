@@ -4,7 +4,7 @@ import { getAllGuides } from '@/lib/data';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Product Guides & Tutorials',
+  title: 'Product Guides & Tutorials | Dikshant Electronics',
   description: 'Explore helpful guides and tutorials for your electronic items from Electron Hub.',
 };
 

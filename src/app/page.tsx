@@ -6,7 +6,11 @@ import { Button } from '@/components/ui/button';
 import { sampleProducts, sampleGuides, productCategories } from '@/lib/data';
 import Link from 'next/link';
 import { ArrowRight, Zap } from 'lucide-react';
-import Image from 'next/image';
+import type { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: 'Home | Dikshant Electronics',
+  description: 'Welcome to Electron Hub - Your one-stop shop for all electronic products and guides.',
+}
 
 export default function HomePage() {
   const featuredProducts = sampleProducts.slice(0, 4);

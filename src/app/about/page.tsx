@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'About Electron Hub',
+  title: 'About Dikshant Electronics',
   description: 'Learn more about Electron Hub, your trusted source for home electronics and expert advice.',
 };
 

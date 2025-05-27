@@ -9,7 +9,7 @@ import Link from 'next/link';
 import { Search, ListFilter } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'All Products',
+  title: 'All Products | Dikshant Electronics',
   description: 'Browse all electronic products available at Electron Hub. Find fans, wires, tools, and more.',
 };
 

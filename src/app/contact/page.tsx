@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
+  title: 'Contact Us | Dikshant Electronics',
   description: 'Get in touch with Dikshant Electronics. We\'re here to help with your questions and support needs.',
 };
 
