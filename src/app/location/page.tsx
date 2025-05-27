@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default function LocationPage() {
-  const googleMapsEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086424958823!2d-122.41941548468157!3d37.77492927975904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c1e94d7b3%3A0x5c1f0b0a0a4b9a0e!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"; // Replace with your actual Google Maps embed URL
+  const googleMapsEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.220738936886!2d81.05942497489335!3d26.864727062152085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be3d7c5c2f5f3%3A0x8360ca64d275fce6!2sDikshant%20Electronics!5e0!3m2!1sen!2sin!4v1748066304018!5m2!1sen!2sin"; // Replace with your actual Google Maps embed URL
 
   return (
     <Container className="py-12 md:py-16">
@@ -38,16 +38,16 @@ export default function LocationPage() {
         
         <div className="text-center prose prose-lg dark:prose-invert max-w-none mx-auto text-foreground/90">
             <h2 className="text-2xl font-semibold text-foreground mb-2">Our Address</h2>
-            <p className="text-muted-foreground">
-                123 Electronic Avenue <br />
-                Tech City, TC 54321 <br />
-                United States
-            </p>
+           <address className="text-muted-foreground text-lg not-italic">
+              Dikshant Electronics <br />
+              Near Railway Crossing Tera Khas  <br />
+              Satrik Road, Chinhat-226028 <br />
+              Lucknow
+            </address>
             <h2 className="text-2xl font-semibold text-foreground mt-6 mb-2">Store Hours</h2>
             <p className="text-muted-foreground">
-                Monday - Friday: 9:00 AM - 7:00 PM <br />
-                Saturday: 10:00 AM - 6:00 PM <br />
-                Sunday: Closed
+                Monday - Sundayi: 9:00 AM - 9:00 PM <br />
+  
             </p>
         </div>
       </div>

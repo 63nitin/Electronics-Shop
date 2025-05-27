@@ -10,20 +10,19 @@ interface ProductImageGalleryProps {
   productName: string;
 }
 
-export function ProductImageGallery({ images, productName }: ProductImageGalleryProps) {
-  const [selectedImage, setSelectedImage] = useState(images[0]);
+// Replace this part with actual product images
+const sampleImages = [
+  "https://images.unsplash.com/photo-1606813902548-275d71b0a07e", // example 1
+  "https://images.unsplash.com/photo-1581291519195-ef11498d1cf5", // example 2
+  "https://images.unsplash.com/photo-1612832020934-e90c2fd09f6b", // example 3
+  "https://images.unsplash.com/photo-1600185365453-d92b8f4f3087"  // example 4
+];
 
-  if (!images || images.length === 0) {
-    return (
-      <Card className="overflow-hidden shadow-lg">
-        <CardContent className="p-0">
-          <div className="aspect-square bg-muted flex items-center justify-center">
-            <p className="text-muted-foreground">No image available</p>
-          </div>
-        </CardContent>
-      </Card>
-    );
-  }
+export function ProductImageGallery({
+  images = sampleImages,
+  productName = "Modern T-Shirt"
+}: ProductImageGalleryProps) {
+  const [selectedImage, setSelectedImage] = useState(images[0]);
 
   return (
     <div className="flex flex-col gap-4">
@@ -36,7 +35,7 @@ export function ProductImageGallery({ images, productName }: ProductImageGallery
               width={600}
               height={600}
               className="object-contain w-full h-full"
-              priority // Prioritize main image
+              priority
               data-ai-hint="product photo"
             />
           </div>
@@ -50,7 +49,9 @@ export function ProductImageGallery({ images, productName }: ProductImageGallery
               onClick={() => setSelectedImage(image)}
               className={cn(
                 "overflow-hidden rounded-md aspect-square border-2 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2",
-                selectedImage === image ? "border-primary shadow-md" : "border-transparent hover:border-muted-foreground/50"
+                selectedImage === image
+                  ? "border-primary shadow-md"
+                  : "border-transparent hover:border-muted-foreground/50"
               )}
             >
               <Image

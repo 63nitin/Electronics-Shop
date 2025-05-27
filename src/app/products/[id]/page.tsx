@@ -75,7 +75,7 @@ export default function ProductPage({ params }: ProductPageProps) {
           </div>
           <p className="text-lg text-muted-foreground mb-4">{product.description}</p>
           
-          <p className="text-3xl font-semibold text-primary my-4">${product.price.toFixed(2)}</p>
+          <p className="text-3xl font-semibold text-primary my-4">₹{product.price.toFixed(2)}</p>
           
           {product.stock > 0 ? (
             <p className="text-sm text-green-600">In Stock ({product.stock} available)</p>

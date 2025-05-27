@@ -15,9 +15,9 @@ export const sampleProducts: Product[] = [
     name: 'Smart Ceiling Fan X100',
     description: 'Energy-efficient smart ceiling fan with remote control and app integration.',
     longDescription: 'The Smart Ceiling Fan X100 brings comfort and convenience to your home. Featuring multiple speed settings, whisper-quiet operation, and seamless integration with your smart home ecosystem. Easy to install and built to last.',
-    price: 129.99,
+    price: 1599,
     category: 'fans',
-    images: ['https://placehold.co/600x400.png', 'https://placehold.co/600x400.png', 'https://placehold.co/600x400.png'],
+    images: ['/bg.png', '/fan1.png', '/fan2.png'],
     specifications: [
       { key: 'Blade Span', value: '52 inches' },
       { key: 'Control', value: 'Remote, App, Voice Assistant' },
@@ -39,7 +39,7 @@ export const sampleProducts: Product[] = [
     longDescription: 'Ensure the safety and efficiency of your home wiring with our Premium Copper Wiring Cable. This 10-meter roll of 14-gauge wire is perfect for various residential applications, offering excellent conductivity and durability. Meets all standard safety certifications.',
     price: 25.50,
     category: 'wires',
-    images: ['https://placehold.co/600x400.png', 'https://placehold.co/600x400.png'],
+    images: ['/copper1.png', '/copper2.png'],
     specifications: [
       { key: 'Length', value: '10 meters' },
       { key: 'Gauge', value: '14 AWG' },
@@ -57,7 +57,7 @@ export const sampleProducts: Product[] = [
     longDescription: 'The DIY Electronics Toolkit Pro includes everything you need for your electronics projects and repairs. From soldering irons to multimeters, this kit is packed with high-quality tools designed for precision and ease of use. Comes in a durable carrying case.',
     price: 79.99,
     category: 'tools',
-    images: ['https://placehold.co/600x400.png', 'https://placehold.co/600x400.png'],
+    images: ['/toolkit.png', '/toolkit1.png'],
     specifications: [
       { key: 'Pieces', value: '60+' },
       { key: 'Includes', value: 'Soldering Iron, Multimeter, Pliers, Screwdrivers, etc.' },
@@ -74,7 +74,7 @@ export const sampleProducts: Product[] = [
     longDescription: 'Transform your home lighting with our LED Smart Bulb. Choose from millions of colors and various shades of white to create the perfect ambiance for any occasion. Control it with your voice, smartphone app, or integrate it into your smart home routines.',
     price: 19.99,
     category: 'lighting',
-    images: ['https://placehold.co/600x400.png', 'https://placehold.co/600x400.png'],
+    images: ['/bulb.png', '/tubelight.png'],
     specifications: [
       { key: 'Type', value: 'LED A19' },
       { key: 'Colors', value: 'RGB + Tunable White (2700K-6500K)' },
@@ -127,11 +127,11 @@ export const sampleGuides: Guide[] = [
 </ul>
 <p><em>Disclaimer: This is a general guide. Always refer to your fan manufacturer's specific instructions and local electrical codes. If unsure, consult a qualified electrician.</em></p>
     `,
-    imageUrl: 'https://placehold.co/800x450.png',
+    imageUrl: '/fan1.png',
     relatedProductIds: ['smart-ceiling-fan-x100'],
     category: 'Installation',
-    lastUpdated: '2023-10-26',
-    author: 'Electron Hub Experts'
+    lastUpdated: '2025-01-15',
+    author: 'Dikshant Electronics Team'
   },
   {
     id: 'choosing-wires',
@@ -166,11 +166,11 @@ export const sampleGuides: Guide[] = [
 </ul>
 <p><em>Always consult local electrical codes and a professional electrician if you are unsure about any aspect of your wiring project.</em></p>
     `,
-    imageUrl: 'https://placehold.co/800x450.png',
+    imageUrl: '/copper2.png',
     relatedProductIds: ['premium-copper-wire-10m'],
     category: 'Knowledge Base',
-    lastUpdated: '2023-11-05',
-    author: 'Electron Hub Experts'
+    lastUpdated: '2025-01-20',
+    author: 'Dikhshant Electronics Team'
   }
 ];
 

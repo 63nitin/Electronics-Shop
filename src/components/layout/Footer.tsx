@@ -28,9 +28,9 @@ export function Footer() {
         <div>
           <h3 className="font-semibold text-foreground">Contact</h3>
           <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
-            <li>Email: support@electronhub.com</li>
-            <li>Phone: (123) 456-7890</li>
-            <li>123 Electronic Ave, Tech City</li>
+            <li>Email: abhishek915118611@gmail.com</li>
+            <li>Phone: +91-8707581455</li>
+            <li>Near Railway Crossing Tera Khas Chinhat Lucknow</li>
           </ul>
         </div>
       </Container>

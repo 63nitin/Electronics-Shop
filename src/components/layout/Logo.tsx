@@ -5,7 +5,7 @@ export function Logo() {
   return (
     <Link href="/" className="flex items-center gap-2 text-xl font-bold text-primary hover:text-primary/90 transition-colors">
       <Zap className="h-7 w-7" />
-      <span>Electron Hub</span>
+      <span>Dikshant Electronics</span>
     </Link>
   );
 }
