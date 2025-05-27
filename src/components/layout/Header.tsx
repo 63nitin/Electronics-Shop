@@ -1,11 +1,9 @@
-
 import Link from 'next/link';
 import { Logo } from './Logo';
 import { Container } from './Container';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet'; // Import SheetTitle
 import { Menu, Home, Package, BookOpen, Sparkles, Search, MapPin, Mail } from 'lucide-react';
-import { Input } from '@/components/ui/input';
 
 const navItems = [
   { href: '/', label: 'Home', icon: Home },
@@ -31,10 +29,6 @@ export function Header() {
               {item.label}
             </Link>
           ))}
-          <div className="relative">
-            <Input type="search" placeholder="Search products..." className="h-9 pr-8 w-40 lg:w-56" />
-            <Search className="absolute right-2 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-          </div>
         </nav>
         <div className="md:hidden">
           <Sheet>
@@ -45,6 +39,8 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              {/* Add SheetTitle for accessibility */}
+              <SheetTitle className="sr-only">Main Navigation</SheetTitle>
               <nav className="flex flex-col space-y-4 mt-8">
                 {navItems.map((item) => (
                   <Link
@@ -56,10 +52,6 @@ export function Header() {
                     {item.label}
                   </Link>
                 ))}
-                <div className="relative mt-4">
-                  <Input type="search" placeholder="Search products..." className="h-10 pr-8 w-full" />
-                  <Search className="absolute right-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-                </div>
               </nav>
             </SheetContent>
           </Sheet>
